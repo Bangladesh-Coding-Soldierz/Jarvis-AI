@@ -4,7 +4,8 @@ import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
 import webbrowser as wb
 import psutil #pip install psutil
-import pyjoke
+import pyjokes
+import os
 
 engine = pyttsx3.init()
 
@@ -58,7 +59,7 @@ def TakeCommand(): # defining the main function for taking commands
         print(e)
         print("Say that again please...")
         return "None"
-    return 
+    return query
 
 def cpu(): # defining the cpu function for cpu info
     usage = str(psutil.cpu_percent())
@@ -69,6 +70,9 @@ def battery(): # defining the battery function for battery info
     speak("Batter is at")
     speak(battery.percent)
 
+def joke(): 
+    speak(pyjokes.get_joke)
+    
 if __name__ == "__main__":
 
     wishme()
@@ -100,10 +104,28 @@ if __name__ == "__main__":
             speak("searching...")
             wb.open('https://www.google.com/search?q=' + search_Term)
             
-        elif 'CPU' in query:
+        elif 'cpu' in query:
             cpu()
             
         elif 'battery' in query:
             battery()
+        
+        elif 'joke' in query:
+            joke()
             
+        elif 'go offline' in query:
+            speak("Going offline sir.....")
+            quit()
+            
+        elif 'spotify' in query:
+            speak("opening spotify sir....")
+            os.popen('cd /usr/usr/bin/ ; spotify')
+
+        elif 'discord' in query:
+            speak("opening discord sir....")
+            os.popen('cd /usr/bin ; discord')
+
+        elif 'vlc' in query:
+            speak("opening vlc player sir....")
+
 TakeCommand()
