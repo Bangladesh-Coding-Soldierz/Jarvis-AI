@@ -4,7 +4,7 @@ import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
 import smtplib
 import webbrowser as wb
-import psutil
+import psutil #pip install psutil
 
 engine = pyttsx3.init()
 
@@ -17,7 +17,7 @@ def time_(): #defining the time function
     Time=datetime.datetime.now().strftime("%I:%M:%S") # for 12-hour clock
     speak(Time)
 
-def date():
+def date(): # defining the date function
     year = (datetime.datetime.now().year)
     month = (datetime.datetime.now().month)
     date = (datetime.datetime.now().day)
@@ -26,7 +26,7 @@ def date():
     speak(month)
     speak(year)
 
-def wishme():
+def wishme(): # defining the wish function
     speak("Welcome back Tahsin!")
     time_()
     date()
@@ -41,7 +41,7 @@ def wishme():
         speak("Good Night Sir!")
     speak("Jarvis at your service. Please tell me how can I help you?")
 
-def TakeCommand():
+def TakeCommand(): # defining the main function for taking commands
     r = sr.Recognizer()
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source)
@@ -60,11 +60,11 @@ def TakeCommand():
         return "None"
     return 
 
-def cpu():
+def cpu(): # defining the cpu function for cpu info
     usage = str(psutil.cpu_percent())
     speak("CPU is at" + usage)
     
-def battery():
+def battery(): # defining the battery function for battery info
     battery = psutil.sensors_battery()
     speak("Batter is at")
     speak(battery.percent)
@@ -106,6 +106,4 @@ if __name__ == "__main__":
         elif 'battery' in query:
             battery()
             
-            
 TakeCommand()
-        
