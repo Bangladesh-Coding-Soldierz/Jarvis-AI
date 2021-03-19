@@ -4,7 +4,7 @@ import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
 import webbrowser as wb
 import psutil #pip install psutil
-
+import pyjoke
 engine = pyttsx3.init()
 
 def speak(audio): #deifning the speak function
