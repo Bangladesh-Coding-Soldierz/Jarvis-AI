@@ -2,7 +2,6 @@ import pyttsx3 # pip install pyttsx3
 import datetime 
 import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
-import smtplib
 import webbrowser as wb
 import psutil #pip install psutil
 
