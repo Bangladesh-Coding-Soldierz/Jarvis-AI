@@ -3,6 +3,8 @@ import datetime
 import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
 import smtplib
+import webbrowser as wb
+import psutil
 
 engine = pyttsx3.init()
 
@@ -46,27 +48,26 @@ def TakeCommand():
 
         print("Listening...")
         r.pause_threshold = 1
-        audio = r.listen(source, timeout=3)
+        audio = r.listen(source, timeout=8)
     try:
         print("Recognizing...")
-        query = r.recognize_google(audio, language='en-uk')
+        query = r.recognize_google(audio, language='en-in')
         print(query)
         
     except Exception as e:
         print(e)
         print("Say that again please...")
         return "None"
-    return query
+    return 
 
-def sendEmail(tp, content):
-    server = smtplib.SMTP('smtp.gmail.com',587)
-    server.ehlo()
-    server.starttls()
-
-    server.login('username@gmail.com' , 'password')
-    sevrer.sendEmail('username@gmail.com',to,content)
-    server.close()
-
+def cpu():
+    usage = str(psutil.cpu_percent())
+    speak("CPU is at" + usage)
+    
+def battery():
+    battery = psutil.sensors_battery()
+    speak("Batter is at")
+    speak(battery.percent)
 
 if __name__ == "__main__":
 
@@ -86,20 +87,25 @@ if __name__ == "__main__":
             speak("according to wikipedia")
             print(result)
             speak(result)
-
-        elif 'send email' in query:
-            try:
-                speak("What should I say?")
-                content = TakeCommand()
-                speak('who is the reciever?')
-                reciever = input("What is the email : ")
-                to = reciever
-                sendEmail(to, content)
-                speak(content)
-                speak("Email has been sent.")
-
-            except Exception as e:
-                print(e)
-                speak("unable to send email.")
-
+            
+        elif 'search in firefox' in query:
+            speak("what should I search in firefox?")
+            firefox = '/usr/bin/firefox %s'
+            search = TakeCommand().lower()
+            wb.get(firefox).open_new_tab(search+'.com')
+            
+        elif 'search in google' in query:
+            speak("what should I search?")
+            search_Term = TakeCommand().lower()
+            speak("searching...")
+            wb.open('https://www.google.com/search?q=' + search_Term)
+            
+        elif 'CPU' in query:
+            cpu()
+            
+        elif 'battery' in query:
+            battery()
+            
+            
 TakeCommand()
+        
