@@ -127,5 +127,34 @@ if __name__ == "__main__":
 
         elif 'vlc' in query:
             speak("opening vlc player sir....")
+            os.popen('cd /usr/bin ; vlc')
+
+        elif 'terminal' in query:
+            speak("opening terminal sir....")
+            os.popen('cd /usr/bin/ ; termit')
+
+        elif 'music player' in query:
+            speak("opening music-player sir....")
+            os.popen('cd /usr/bin ; deepin-music')
+
+        elif 'pdf' in query:
+            speak("opening pdf viewer sir....")
+            os.popen('cd /usr/bin ; wpspdf')
+
+        elif 'screen recorder' in query:
+            speak("opening screen recorder sir....")
+            os.popen('cd /usr/bin ; obs')
+
+        elif 'calculator' in in query:
+            speak("opening calculator sir....")
+            os.os.popen('cd /usr/bin ; gnome-calculator')
+
+        elif 'notepad' in in query:
+            speak("opening notepad sir....")
+            os.popen('cd /usr/bin ; pluma')
+
+        elif 'virtual keyboard'  in query:
+            speak("opening virtual keyboard sir....")
+            os.popen('cd /usr/bin ; onboard')
 
 TakeCommand()
