@@ -49,7 +49,7 @@ def TakeCommand(): # defining the main function for taking commands
 
         print("Listening...")
         r.pause_threshold = 1
-        audio = r.listen(source, timeout=8)
+        audio = r.listen(source, timeout=5)
     try:
         print("Recognizing...")
         query = r.recognize_google(audio, language='en-in')
@@ -145,16 +145,16 @@ if __name__ == "__main__":
             speak("opening screen recorder sir....")
             os.popen('cd /usr/bin ; obs')
 
-        elif 'calculator' in in query:
+        elif 'calculator' in query:
             speak("opening calculator sir....")
-            os.os.popen('cd /usr/bin ; gnome-calculator')
+            os.popen('cd /usr/bin ; gnome-calculator')
 
-        elif 'notepad' in in query:
+        elif 'notepad' in query:
             speak("opening notepad sir....")
             os.popen('cd /usr/bin ; pluma')
 
         elif 'virtual keyboard'  in query:
             speak("opening virtual keyboard sir....")
             os.popen('cd /usr/bin ; onboard')
-
+                        
 TakeCommand()
