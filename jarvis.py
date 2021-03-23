@@ -6,6 +6,11 @@ import webbrowser as wb
 import psutil #pip install psutil
 import pyjokes
 import os
+import smtplib
+import pyautogui
+import json
+import requests
+from urllib.requests import urlopen
 
 engine = pyttsx3.init()
 
@@ -72,6 +77,36 @@ def battery(): # defining the battery function for battery info
 
 def joke(): 
     speak(pyjokes.get_joke)
+    
+def send_email():
+    speak("who is the reciever sir?")
+    TO = input("Please enter the reciever email: ")
+    FROM = "tahsinqp9999@gmail.com"
+    passwd = 'tahsin#5339'
+    speak('what is the subject sir?')
+    SUBJECT = input('Subject: ')
+    speak('enter the email body please!')
+    text = input("Email body: ")
+
+    BODY = "\r\n".join((
+        "From: %s" % FROM,
+        "To: %s" % TO,
+        "Subject: %s" % SUBJECT ,
+        "",
+        text
+        ))
+
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(FROM, passwd)
+    server.sendmail(FROM, [TO], BODY)
+    print('aeh')
+    server.quit()
+
+def scrnshot():
+    speak('taken secreenshot sir!')
+    img = pyautogui.screenshot()
+    img.show()
     
 if __name__ == "__main__":
 
@@ -156,5 +191,20 @@ if __name__ == "__main__":
         elif 'virtual keyboard'  in query:
             speak("opening virtual keyboard sir....")
             os.popen('cd /usr/bin ; onboard')
-                        
-TakeCommand()
+            
+        elif 'send email' in query:
+            send_email()
+
+        elif 'screenshot' in query:
+            scrnshot()
+            
+        elif 'news' in query:
+            try:
+                jsonOBj = urlopen(http://newsapi.org/top-headlines?country=BD&category=technology&keywords=category=technologykey=b83181307d844c53981b75766fcb4bcd)
+                data = json.loads(jsonOBj)
+                i = 1
+                
+                speak("Here are some top headlines from the technology industry")
+                for item in data['articles']:
+                    print('===========TOP HEADLINES===========')
+                    print()
