@@ -81,8 +81,8 @@ def joke():
 def send_email():
     speak("who is the reciever sir?")
     TO = input("Please enter the reciever email: ")
-    FROM = "tahsinqp9999@gmail.com"
-    passwd = 'tahsin#5339'
+    FROM = "your email here"
+    passwd = 'your password hehe'
     speak('what is the subject sir?')
     SUBJECT = input('Subject: ')
     speak('enter the email body please!')
