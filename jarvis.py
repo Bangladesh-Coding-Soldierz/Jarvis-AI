@@ -197,14 +197,5 @@ if __name__ == "__main__":
 
         elif 'screenshot' in query:
             scrnshot()
-            
-        elif 'news' in query:
-            try:
-                jsonOBj = urlopen(http://newsapi.org/top-headlines?country=BD&category=technology&keywords=category=technologykey=b83181307d844c53981b75766fcb4bcd)
-                data = json.loads(jsonOBj)
-                i = 1
-                
-                speak("Here are some top headlines from the technology industry")
-                for item in data['articles']:
-                    print('===========TOP HEADLINES===========')
-                    print()
+
+TakeCommand()            
