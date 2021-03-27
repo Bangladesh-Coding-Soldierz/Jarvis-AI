@@ -4,13 +4,13 @@ import speech_recognition as sr #pip install SpeechRecognition
 import wikipedia # pip install wikipedia
 import webbrowser as wb
 import psutil #pip install psutil
-import pyjokes
+import pyjokes # pip install pyjokes
 import os
 import smtplib
-import pyautogui
+import pyautogui #pip install pyautogui
 import json
-import requests
-from urllib.requests import urlopen
+import requests #pip install requests
+import wolframalpha # pip install wolframalpha
 
 engine = pyttsx3.init()
 
