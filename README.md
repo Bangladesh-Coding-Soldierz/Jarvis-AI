@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 # Jarvis-AI 
 
 Jarvis is an AI based personal voice assistant for computer, currently available for Linux. It works on command line. He can automate your daily tasks like opening spotify, searching on google or he can also tell you a joke or even he can send an email to a specific perticipant.
