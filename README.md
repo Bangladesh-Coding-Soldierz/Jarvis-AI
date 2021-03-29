@@ -1,6 +1,6 @@
 # Jarvis-AI 
 
-Jarvis is an AI based personal voice assistant for Linux, Macos and Windows. It works on command line. He can automate your daily tasks like opening spotify, searching on google or he can also tell you a joke or even he can send an email to a specific perticipant.
+Jarvis is an AI based personal voice assistant for computer, currently available for Linux. It works on command line. He can automate your daily tasks like opening spotify, searching on google or he can also tell you a joke or even he can send an email to a specific perticipant.
 
 <a href="">Check a tutorial of how to use this bot</a>
 
