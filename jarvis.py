@@ -8,9 +8,10 @@ import pyjokes # pip install pyjokes
 import os
 import smtplib
 import pyautogui #pip install pyautogui
-import json
-import requests #pip install requests
 import wolframalpha # pip install wolframalpha
+import turtle as tt # pip install turtle
+
+wolframalpha_app_id = 'your_api' #get your api from https://products.wolframalpha.com/api/ 
 
 engine = pyttsx3.init()
 
@@ -107,6 +108,59 @@ def scrnshot():
     speak('taken secreenshot sir!')
     img = pyautogui.screenshot()
     img.show()
+
+def sqre():
+    tt.title('Square Shape')
+    speak('What should be the square color sir?')
+    sqcolor = input('Please type the color name: ')
+    tt.hideturtle()
+    tt.fillcolor(sqcolor)
+    tt.begin_fill()
+    tt.color(sqcolor)
+    tt.forward(200)
+    tt.left(90)
+    tt.forward(200)
+    tt.left(90)
+    tt.forward(200)
+    tt.left(90)
+    tt.forward(200)
+    tt.left(90)
+    tt.end_fill()
+    tt.done()
+
+def trng():
+    speak('What should be the triangle color sir?')
+    sqcolor = input('Please type the color sir: ')
+    tt.hideturtle()
+    tt.fillcolor(sqcolor)
+    tt.begin_fill()
+    tt.color(sqcolor)
+    tt.forward(200)
+    tt.left(120)
+    tt.forward(200)
+    tt.left(120)
+    tt.forward(200)
+    tt.left(120)
+    tt.end_fill()
+    tt.done()
+
+def hrt():
+    speak("What should be the heart color sir?")
+    hrtcolor = input('Please type the color sir: ')
+    speak('What should be the background color sir?')
+    hrtbg = input('Please type the background color sir: ')
+    tt.color(hrtcolor)
+    tt.fillcolor(hrtcolor)
+    tt.bgcolor(hrtbg)
+    tt.begin_fill()
+    tt.left(50)
+    tt.forward(100)
+    tt.circle(40, 180)
+    tt.left(260)
+    tt.circle(40, 180)
+    tt.forward(100)
+    tt.end_fill()
+    tt.done()
     
 if __name__ == "__main__":
 
@@ -198,4 +252,22 @@ if __name__ == "__main__":
         elif 'screenshot' in query:
             scrnshot()
 
-TakeCommand()            
+        elif 'draw a square' in query:
+            sqre()
+
+        elif 'draw a triangle' in query:
+            trng()
+
+        elif 'draw a heart' in query:
+            hrt()
+
+        elif 'calculate' in query:
+            client = wolframalpha.Client(wolframalpha_app_id)
+            indx = query.lower().split().index('calculate')
+            query = query.split()[indx + 1:]
+            res = client.query(' '.join(query))
+            answer = next(res.results).text
+            print("The answer is " + answer)
+            speak("The answer is " + answer)
+
+TakeCommand()      
