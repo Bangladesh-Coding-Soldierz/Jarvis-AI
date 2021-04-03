@@ -1,9 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/Bangladesh-Coding-Soldierz/Jarvis-AI.svg)](https://GitHub.com/Bangladesh-Coding-Soldierz/Jarvis-AI/issues/)
-[![GitHub contributors](https://img.shields.io/github/contributors/Bangladesh-Coding-Soldierz/Jarvis-AI.svg)](https://GitHub.com/Bangladesh-Coding-Soldierz/Jarvis-AI/graphs/contributors/)
+[![GitHub Issues](https://img.shields.io/github/issues/Bangladesh-Coding-Soldierz/Jarvis-AI.svg)](https://GitHub.com/Bangladesh-Coding-Soldierz/Jarvis-AI/issues/)
+[![GitHub Contributors](https://img.shields.io/github/contributors/Bangladesh-Coding-Soldierz/Jarvis-AI.svg)](https://GitHub.com/Bangladesh-Coding-Soldierz/Jarvis-AI/graphs/contributors/)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![GitHub forks](https://img.shields.io/github/forks/Bangladesh-Coding-Soldierz/Jarvis-AI.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Bangladesh-Coding-Soldiers/Jarvis-AI/network/)
-[![GitHub stars](https://img.shields.io/github/stars/Bangladesh-Coding-Soldierz/Jarvis-AI.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Naereen/Bangladesh-Coding-Soldierz/Jarvis-AI/stargazers/)
+[![GitHub Forks](https://img.shields.io/github/forks/Bangladesh-Coding-Soldierz/Jarvis-AI.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/Bangladesh-Coding-Soldiers/Jarvis-AI/network/)
+[![GitHub Stars](https://img.shields.io/github/stars/Bangladesh-Coding-Soldierz/Jarvis-AI.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/Naereen/Bangladesh-Coding-Soldierz/Jarvis-AI/stargazers/)
 
 # Jarvis-AI 
 
