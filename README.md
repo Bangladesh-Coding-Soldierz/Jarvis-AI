@@ -28,3 +28,7 @@ and you are ready to use jarvis.
 # Developer Contacts 
 - tahsinqp27@gmail.com
 
+# Suggest us a feature
+
+Open an issue [here](https://github.com/Bangladesh-Coding-Soldierz/Jarvis-AI/issues/new) with your suggestion.
+
