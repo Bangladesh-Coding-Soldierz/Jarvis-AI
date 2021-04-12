@@ -32,3 +32,5 @@ and you are ready to use jarvis.
 
 Open an issue [here](https://github.com/Bangladesh-Coding-Soldierz/Jarvis-AI/issues/new) with your suggestion.
 
+# Help us imporoving
+Open an issue [here](https://github.com/Bangladesh-Coding-Soldierz/Jarvis-AI/issues/new) with your problem.
