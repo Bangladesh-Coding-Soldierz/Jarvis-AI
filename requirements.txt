@@ -4,5 +4,5 @@ wikipedia
 psutil
 pyjokes
 pyautogui
-requests
-
+wolframalpha
+pyaudio

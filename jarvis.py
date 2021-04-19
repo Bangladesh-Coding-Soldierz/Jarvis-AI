@@ -246,7 +246,7 @@ if __name__ == "__main__":
             speak("opening virtual keyboard sir....")
             os.popen('cd /usr/bin ; onboard')
             
-        elif 'send email' in query:
+        elif 'send email' or 'send mail' in query:
             send_email()
 
         elif 'screenshot' in query:
@@ -270,4 +270,4 @@ if __name__ == "__main__":
             print("The answer is " + answer)
             speak("The answer is " + answer)
 
-TakeCommand()      
+TakeCommand()
