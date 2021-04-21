@@ -16,7 +16,7 @@ To use Jarvis on your computer run
 ```py
 git clone https://github.com/Bangladesh-Coding-Soldierz/Jarvis-AI #clone this repository
 cd Jarvis-AI #change the directory to Jarvis-AI folder
-pip3 install -r requirements.txt #install all the packages needed to use jarvis
+python3 setup.py #install all the packages needed to use jarvis
 python3 jarvis.py 
 ```
 and you are ready to use jarvis. 
