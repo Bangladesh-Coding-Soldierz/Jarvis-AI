@@ -246,7 +246,7 @@ if __name__ == "__main__":
             speak("opening virtual keyboard sir....")
             os.popen('cd /usr/bin ; onboard')
             
-        elif 'send email' or 'send mail' in query:
+        elif 'send email' in query:
             send_email()
 
         elif 'screenshot' in query:
